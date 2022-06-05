@@ -1,0 +1,14 @@
+.product{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 30px;
+    gap: 30px;
+}
+.img{
+    width: 80%;
+    height: 50%;
+}
+.single{
+    border: 1px solid black;
+    height: 350px;
+}
