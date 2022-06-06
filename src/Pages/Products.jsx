@@ -38,6 +38,7 @@ const Products = () => {
        <div className={styles.single} >
          <img src={e.image} className={styles.img}/>
          <h5>{e.title}</h5>
+         <button>Add to cart</button>
          </div>
     ))}
     </div>
