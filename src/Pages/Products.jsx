@@ -1,18 +1,11 @@
 import React, { useState,useEffect } from 'react'
 import axios from 'axios'
 import styles from '../components/style.module.css'
+import {Link} from "react-router-dom"
 
 const Products = () => {
   // const [query,setQuery]=useState();
   const [todos,setTodos]=useState([])
-
-  // const handleClick= (e)=>{
-  //   e.preventDefault()
-  //   console.log(e.target.value)
-  //   setQuery(e.target.value)
-  // }
-
-  // console.log(query)
 
   useEffect (()=>{
     axios({
@@ -35,12 +28,14 @@ const Products = () => {
   return (
     <div className={styles.product}>
     {todos.map((e)=>(
-       <div className={styles.single} >
+       <div className={styles.single} ><Link to={`/products/${e.id}`}>
          <img src={e.image} className={styles.img}/>
          <h5>{e.title}</h5>
          <button>Add to cart</button>
+         </Link>
          </div>
     ))}
+    
     </div>
   )
 }
